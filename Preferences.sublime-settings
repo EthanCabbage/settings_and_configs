@@ -1,0 +1,16 @@
+{
+	"color_scheme": "Packages/Colorsublime - Themes/Bittersweet.tmTheme",
+	"default_line_ending": "unix",
+	"font_size": 9,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		100
+	],
+	"sidebar_tree_small": true,
+	"tabs_small": true,
+	"theme": "Numix Dark Light Blue.sublime-theme"
+}
