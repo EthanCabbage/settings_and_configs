@@ -38,3 +38,32 @@ NumLock is always on, ScrollLock and CapsLock are always off, and those keys are
 - `myadd`: Fill specified address.
 - `myphone`: Fill specified phone number (e.g. 1112223333).
 - `Myphone`: Fill specified formatted phone number (e.g. (111) 222-3333).
+
+## Bash
+
+### Aliases
+- `gs`: `git status`
+- `gd`: `git diff`
+- `ga`: `git add`
+- `gc`: `git commit -m`
+- `gp`: `git push`
+- `gpp`: `git pull`
+- `py`: `python`
+- `ll`: `ls -alG`
+- `ls`: `ls -G`
+- `..`: `cd ..`
+- `home`: `cd ~`
+- `use <virtualenv_name>`: `. <virtualenv_name>/bin/activate`
+### Passive Settings
+The main PS1 input line is set to the following colors and text to allow for easy reading and quick information gathering (the brackets shown here are literal brackets shown in the PS1 input line):
+```
+[bright_green_username bright_yellow_@ bright_green_host][bright_blue_working_directory] (bright_blue_git_branch_status) bright_blue_$
+```
+For example, here are PS1 lines both inside and outside a git directory:
+```
+[ecabbage@home_desktop][~/Documents/Git/settings_and_configs] (master=)$ 
+[ecabbage@home_desktop][~/Documents] $ 
+```
+Colors shown during the `ls` command have also been changed to avoid using dark blue text on a black background, and will instead show all text in white.
+### VIM
+The VIM color scheme has been changed to `koehler`, which avoids using dark blue text on a black background.
