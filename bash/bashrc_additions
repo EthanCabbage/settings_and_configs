@@ -1,0 +1,27 @@
+alias gs="git status"
+alias gc="git commit -m"
+alias ga="git add"
+alias gd="git diff"
+alias gp="git push"
+alias gpp="git pull"
+
+alias py="python"
+alias ll="ls -alG"
+alias ls="ls -G"
+alias ..="cd .."
+alias home="cd ~"
+
+GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUPSTREAM="auto"
+
+export PS1="\[\e[1;32m\][\u\[\e[1;33m\]@\[\e[1;32m\]\h]\[\e[1;36m\][\w]\$(__git_ps1)$ \[\e[0m\]"
+export PS2="\[\e[1;36m\]> \[\e[0m\]"
+
+#LS_COLORS='di=1;34'; export LS_COLORS
+export CLICOLOR=1
+export LSCOLORS=gxfxcxdxbxegedabaeaced
+
+function use {
+    . $1/bin/activate
+}
