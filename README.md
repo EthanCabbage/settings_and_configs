@@ -45,8 +45,8 @@ I use the [Karabiner-Elements](https://pqrs.org/osx/karabiner/) application on m
 ### Setup
 #### macOS Settings
 The first thing I do is in the keyboard settings. In **System Preferences -> Keyboard -> Modifier Keys...**, I set the Caps Lock Key to "No Action". Make sure to use the "Select keyboard" dropdown to do this for every keyboard you plan to use.
-#### Karabiner Elements
-Once the settings are taken care of, install Karabiner Elements. After it is installed, open `~/.config/karabiner/karabiner.json` and paste in the `karabiner.json` [code](karabiner_elements/karabiner.json) I have stored in this repo. Credit for the Caps Lock HyperKey modification goes to Brett Terpstra, and more detailed instructions can be found on his [webpage](http://brettterpstra.com/2017/06/15/a-hyper-key-with-karabiner-elements-full-instructions/). This essentially makes a single click of the Caps Lock key function as an Escape keypress, and a press-and-hold of the Caps Lock key function as a press-and-hold of `⌃⌥⇧⌘`. I then use that unique modifier in combination with the `H`, `J`, `K`, `L`, `U`, and `I` keys in further macros to provide access to the arrow keys, Backspace, Home, End, and Delete without lifting your hands.
+#### Karabiner-Elements
+Once the settings are taken care of, install Karabiner-Elements. After it is installed, open `~/.config/karabiner/karabiner.json` and paste in the `karabiner.json` [code](karabiner_elements/karabiner.json) I have stored in this repo. Credit for the Caps Lock HyperKey modification goes to Brett Terpstra, and more detailed instructions can be found on his [webpage](http://brettterpstra.com/2017/06/15/a-hyper-key-with-karabiner-elements-full-instructions/). This essentially makes a single click of the Caps Lock key function as an Escape keypress, and a press-and-hold of the Caps Lock key function as a press-and-hold of `⌃⌥⇧⌘`. I then use that unique modifier in combination with the `H`, `J`, `K`, `L`, `Y`, `U`, `I`, and `O` keys in further macros to provide access to the arrow keys, Backspace, Home, End, and Delete without lifting your hands.
 
 ### Hotkeys and Shortcuts
 - `[CapsLock]+<HJKL>`: Arrow keys, VIM-style.
