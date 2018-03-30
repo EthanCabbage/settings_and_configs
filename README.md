@@ -39,25 +39,19 @@ NumLock is always on, ScrollLock and CapsLock are always off, and those keys are
 - `myphone`: Fill specified phone number (e.g. 1112223333).
 - `Myphone`: Fill specified formatted phone number (e.g. (111) 222-3333).
 
-## Karabiner and Keyboard Maestro (macOS)
-I use a combination of Karabiner Elements and Keyboard Maestro on macOS (Sierra v10.12.6 at the time of writing this) to achieve similar results to using AutoHotkey on Windows.
+## Karabiner-Elements (macOS)
+I use the [Karabiner-Elements](https://pqrs.org/osx/karabiner/) application on macOS (Karabiner-Elements 11.6.0 and Sierra v10.12.6 at the time of writing this) to achieve similar results to using AutoHotkey on Windows.
 
 ### Setup
 #### macOS Settings
 The first thing I do is in the keyboard settings. In **System Preferences -> Keyboard -> Modifier Keys...**, I set the Caps Lock Key to "No Action". Make sure to use the "Select keyboard" dropdown to do this for every keyboard you plan to use.
 #### Karabiner Elements
-Once the settings are taken care of, install Karabiner Elements. Once it is installed, open `~/.config/karabiner/karabiner.json` and paste in the `karabiner.json` [code](karabiner_elements/karabiner.json) I have stored in this repo. Credit for this goes to Brett Terpstra, and more detailed instructions can be found on his [webpage](http://brettterpstra.com/2017/06/15/a-hyper-key-with-karabiner-elements-full-instructions/). This essentially makes a single click of the Caps Lock key function as an Escape keypress, and a press and hold of the Caps Lock key function as a press and hold of `⌃⌥⇧⌘H`. I then use that unique combination in Keyboard Maestro.
-#### Keyboard Maestro
-Install and open Keyboard Maestro. In the Global Macro Group, create a new Macro with the [+] button. Add a trigger (hotkey) and press `CapsLock+H`. It should show as "`⌃⌥⇧⌘H` is pressed." Change this to "`⌃⌥⇧⌘H` is down." This will mean that holding down `CapsLock+H` will simulate holding down the Left Arrow key, and the cursor will continue to scroll left as long as the key combination is held. Add a new action and select "Keystroke", then enter a Left Arrow keypress. Follow the same steps to set up `CapsLock+<JKL>` as the other arrow keys, Vim-style. Do the same for `CapsLock+<UI>` for Home (`⌘+LeftArrow`) and End (`⌘+RightArrow`), respectively, but leave the trigger as "is pressed." Following the same basic setup, also create macros for text expansion (**Typed String Trigger** trigger and **Insert Text by Pasting** action) with addresses and phone numbers.
+Once the settings are taken care of, install Karabiner Elements. After it is installed, open `~/.config/karabiner/karabiner.json` and paste in the `karabiner.json` [code](karabiner_elements/karabiner.json) I have stored in this repo. Credit for the Caps Lock HyperKey modification goes to Brett Terpstra, and more detailed instructions can be found on his [webpage](http://brettterpstra.com/2017/06/15/a-hyper-key-with-karabiner-elements-full-instructions/). This essentially makes a single click of the Caps Lock key function as an Escape keypress, and a press-and-hold of the Caps Lock key function as a press-and-hold of `⌃⌥⇧⌘`. I then use that unique modifier in combination with the `H`, `J`, `K`, `L`, `U`, and `I` keys in further macros to provide access to the arrow keys, Backspace, Home, End, and Delete without lifting your hands.
 
 ### Hotkeys and Shortcuts
 - `[CapsLock]+<HJKL>`: Arrow keys, VIM-style.
-- `[CapsLock]+<UI>`: Home, End.
+- `[CapsLock]+<YUIO>`: Backspace, Home, End, Delete.
 - `[CapsLock]`: Esc.
-- `[⌘]+[Shift]+<0-9>`: Fill specified email.
-- `myadd`: Fill specified address.
-- `myphone`: Fill specified phone number (e.g. 1112223333).
-- `Myphone`: Fill specified formatted phone number (e.g. (111) 222-3333).
 
 ## Bash
 
